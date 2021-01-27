@@ -18,8 +18,8 @@ for _, place in pairs(pages:GetCurrentPage()) do
 end
 
 if ISGAME == true then
-    local whitelisturl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarmkey.lua"
-    local guiurl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarm.lua"
+    whitelisturl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarmkey.lua"
+    guiurl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarm.lua"
     loadstring(game:HttpGet(whitelisturl, true))();
     wait(0.5)
     loadstring(game:HttpGet(guiurl, true))();
