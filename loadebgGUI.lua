@@ -21,6 +21,6 @@ if ISGAME == true then
     whitelisturl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgGUIkey.lua"
     guiurl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgGUI.lua"
     loadstring(game:HttpGet(whitelisturl, true))();
-    wait(0.5)
+    wait()
     loadstring(game:HttpGet(guiurl, true))();
 end
