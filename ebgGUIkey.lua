@@ -14,7 +14,8 @@ local whitelist = {
     -- "6DA4CA6A-F7E3-4D9E-B9CA-295E24CF8EED", -- john's accounts
     "2025A77F-AABC-4214-9CC3-73F06C459979", -- john's accounts
     "837736AA-0192-47F9-98C5-8DD0DF18FE74", -- sterling's accounts
-    "4EE2B08D-D507-4403-98A0-23495B58A171" -- vastorio's accounts
+    "4EE2B08D-D507-4403-98A0-23495B58A171", -- vastorio's accounts
+    "A9B3019A-76D3-443F-A62B-8D64C553136E" -- alaska's accounts
 }
 
 warn(lastupdate)
