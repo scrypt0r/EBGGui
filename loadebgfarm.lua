@@ -18,9 +18,7 @@ for _, place in pairs(pages:GetCurrentPage()) do
 end
 
 if ISGAME == true then
-    whitelisturl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarmkey.lua"
-    guiurl = "https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarm.lua"
-    loadstring(game:HttpGet(whitelisturl, true))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarmkey.lua", true))();
     wait()
-    loadstring(game:HttpGet(guiurl, true))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/scrypt0r/EBGGui/main/ebgfarm.lua", true))();
 end
