@@ -160,11 +160,7 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 		local GC = getconnections or get_signal_cons
 		if GC then
 			for i, v in pairs(GC(Players.LocalPlayer.Idled)) do
-				if v["Disable"] then
-					v["Disable"](v)
-				elseif v["Disconnect"] then
-					v["Disconnect"](v)
-				end
+				v:Disable()
 			end
 			warn('Anti idle is enabled')
 		else
