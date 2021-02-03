@@ -159,7 +159,7 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 		warn("antiidle test")
 		for i, v in pairs(getconnections(Players.LocalPlayer.Idled)) do
 			warn('Anti idle is enabled')
-			v:Disable()
+			warn(v.State)
 		end
 		warn('Anti idle is enabled')
 	end
