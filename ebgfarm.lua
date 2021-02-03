@@ -156,6 +156,7 @@ warn("Specified place: " .. Place)
 
 if _G.Credits == "This script was made by jaden#4143! Join my discord server at discord.gg/K2wewFWWFZ. IF THESE CREDITS ARE REMOVED, THE SCRIPT WILL NOT WORK." then
 	function _G.antiAFK()
+		warn("antiidle test")
 		local GC = getconnections or get_signal_cons
 		if GC then
 			for i, v in pairs(GC(Players.LocalPlayer.Idled)) do
@@ -552,17 +553,12 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 					
 					local humanoid = player.Character:WaitForChild("Humanoid")
 					repeat wait() until humanoid.MaxHealth ~= humanoid.Health
-					
-					pcall(function()
-						player.Character:BreakJoints()
-					end)
+						
+					player.Character:BreakJoints()
 				end)
 				
 				warn("Victim Script successfully loaded!")
 				warn(lastupdate)
-				
-				wait(.5)
-				player.Character:BreakJoints()
 			end
 		end
 	end
