@@ -157,15 +157,11 @@ warn("Specified place: " .. Place)
 if _G.Credits == "This script was made by jaden#4143! Join my discord server at discord.gg/K2wewFWWFZ. IF THESE CREDITS ARE REMOVED, THE SCRIPT WILL NOT WORK." then
 	function _G.antiAFK()
 		warn("antiidle test")
-		local GC = getconnections or get_signal_cons
-		if GC then
-			for i, v in pairs(GC(Players.LocalPlayer.Idled)) do
-				v:Disable()
-			end
+		for i, v in pairs(getconnections(Players.LocalPlayer.Idled)) do
+			v:Disable()
 			warn('Anti idle is enabled')
-		else
-			warn('Anti Idle can\'t work on this exploit!')
 		end
+		warn('Anti idle is enabled')
 	end
 
 	local isGrinder = false
