@@ -158,8 +158,8 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 	function _G.antiAFK()
 		warn("antiidle test")
 		for i, v in pairs(getconnections(Players.LocalPlayer.Idled)) do
-			v:Disable()
 			warn('Anti idle is enabled')
+			v:Disable()
 		end
 		warn('Anti idle is enabled')
 	end
