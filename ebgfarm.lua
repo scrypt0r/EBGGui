@@ -552,12 +552,17 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 					
 					local humanoid = player.Character:WaitForChild("Humanoid")
 					repeat wait() until humanoid.MaxHealth ~= humanoid.Health
-						
-					player.Character:BreakJoints()
+					
+					pcall(function()
+						player.Character:BreakJoints()
+					end)
 				end)
 				
 				warn("Victim Script successfully loaded!")
 				warn(lastupdate)
+				
+				wait(.5)
+				player.Character:BreakJoints()
 			end
 		end
 	end
