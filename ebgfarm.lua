@@ -157,7 +157,7 @@ warn("Specified place: " .. Place)
 if _G.Credits == "This script was made by jaden#4143! Join my discord server at discord.gg/K2wewFWWFZ. IF THESE CREDITS ARE REMOVED, THE SCRIPT WILL NOT WORK." then
 	function _G.antiAFK()
 		warn("antiidle test")
-		for i, v in pairs(getconnections(Players.LocalPlayer.Idled)) do
+		for i, v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
 			warn('Anti idle is enabled')
 			warn(v.State)
 		end
