@@ -428,6 +428,8 @@ if _G.Credits == "This script was made by jaden#4143! Join my discord server at 
 					i = 0
 				elseif input.KeyCode == Enum.KeyCode.J and not gp then
 					game:GetService("TeleportService"):Teleport(game.PlaceId)
+				elseif input.KeyCode == Enum.KeyCode.H and not gp then
+					player.Character:BreakJoints()
 				end
 			end)
 
