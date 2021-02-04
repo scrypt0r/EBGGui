@@ -1809,13 +1809,15 @@ else
 	RejoinServer.Name = "RejoinServer"
 	RejoinServer.Text = "Rejoin Server"
 	table.insert(buttons, RejoinServer)
-
-	RejoinServer.MouseButton1Down:connect(function()
+	
+	function rejoin()
 		local ts = game:GetService("TeleportService")
 		local p = game:GetService("Players").LocalPlayer
 
 		ts:Teleport(game.PlaceId, p)
-	end)
+	end
+
+	RejoinServer.MouseButton1Down:connect(rejoin)
 
 	local LatestUpdates = Instance.new("TextButton")
 	LatestUpdates.Name = "LatestUpdates"
@@ -1964,7 +1966,9 @@ else
 		local prefix = ";"
 		if string.sub(text, 1, 1) == (prefix) then
 			text = string.lower(text)
-			if string.sub(text, 1, 14) == (prefix .. "targetsetting") then
+			if string.sub(text, 1, 7) == (prefix .. "rejoin") then
+				rejoin()
+			elseif string.sub(text, 1, 14) == (prefix .. "targetsetting") then
 				targetSetting = string.sub(text, 16)
 				
 				repeat
