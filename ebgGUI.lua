@@ -199,6 +199,8 @@ else
 		    ThrustEnabled = nil
 		    ThrustPower = nil
 		    viewing = nil
+			TPTargetEnabled = nil
+			LoopTPTargetEnabled = nil
 		    ESPEnabled = nil
 		    TPShardsEnabled = nil
 		    TPDiamondsEnabled = nil
@@ -1436,15 +1438,25 @@ else
 	TPTarget.Text = "Teleport To Target (ON) [U]"
 	table.insert(buttons, TPTarget)
 	
+	TPTargetEnabled = true
+	
 	function TPToTarget()
-		if target ~= game.Players.LocalPlayer.Name then
+		if TPTargetEnabled and target ~= game.Players.LocalPlayer.Name then
 			repeat wait() until getRoot(game.Players.LocalPlayer.Character) and getRoot(game.Players[target].Character)
 			
 			getRoot(game.Players.LocalPlayer.Character).CFrame = getRoot(game.Players[target].Character).CFrame
 		end
 	end
 	
-	TPTarget.MouseButton1Down:connect(TPToTarget)
+	TPTarget.MouseButton1Down:connect(function()
+		if TPTargetEnabled == false then
+			TPTargetEnabled = true
+			TPTarget.Text = "Teleport To Target (ON) [U]"
+		else
+			TPTargetEnabled = false
+			TPTarget.Text = "Teleport To Target (OFF) [U]"
+		end
+	end)
 	
 	local LoopTPTarget = Instance.new("TextButton")
 	LoopTPTarget.Name = "LoopTPTarget"
@@ -2456,7 +2468,7 @@ else
 				elseif input.KeyCode == Enum.KeyCode.C then
 					exploit()
 				elseif input.KeyCode == Enum.KeyCode.U then
-					
+					TPToTarget()
 				elseif input.KeyCode == Enum.KeyCode.K then
 					AntiBlindFunc()
 				elseif input.KeyCode == Enum.KeyCode.T then
