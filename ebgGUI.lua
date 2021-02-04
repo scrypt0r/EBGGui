@@ -1460,8 +1460,24 @@ else
 	
 	local LoopTPTarget = Instance.new("TextButton")
 	LoopTPTarget.Name = "LoopTPTarget"
-	LoopTPTarget.Text = "Loop Teleport To Target (ON) [U]"
+	LoopTPTarget.Text = "Loop Teleport To Target (OFF)"
 	table.insert(buttons, LoopTPTarget)
+	
+	LoopTPTargetEnabled = false
+	
+	LoopTPTarget.MouseButton1Down:connect(function()
+		if LoopTPTargetEnabled == false then
+			LoopTPTargetEnabled = true
+			LoopTPTarget.Text = "Loop Teleport To Target (ON)"
+			while LoopTPTargetEnabled do
+				wait()
+				TPToTarget()
+			end
+		else
+			LoopTPTargetEnabled = false
+			LoopTPTarget.Text = "Loop Teleport To Target (OFF)"
+		end
+	end)
 
 	local CBringTarget = Instance.new("TextButton")
 	CBringTarget.Name = "CBringTarget"
