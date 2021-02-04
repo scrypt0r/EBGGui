@@ -387,7 +387,7 @@ else
 	UIGridLayout.FillDirection = Enum.FillDirection.Horizontal
 	UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIGridLayout.CellPadding = UDim2.new(0, 7, 0, 7)
-	UIGridLayout.CellSize = UDim2.new(0.45, 0, 0.03, 0)
+	UIGridLayout.CellSize = UDim2.new(0.45, 0, 0.075, 0)
 	UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIGridLayout.Parent = mainframe
 	
