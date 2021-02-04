@@ -387,7 +387,7 @@ else
 	UIGridLayout.FillDirection = Enum.FillDirection.Horizontal
 	UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 	UIGridLayout.CellPadding = UDim2.new(0, 7, 0, 7)
-	UIGridLayout.CellSize = UDim2.new(0.45, 0, 0.05, 0)
+	UIGridLayout.CellSize = UDim2.new(0.45, 0, 0.055, 0)
 	UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 	UIGridLayout.Parent = mainframe
 	
@@ -1854,7 +1854,7 @@ else
 		table.insert(buttons, "buttonEvener")
 	end
 
-	mainframe.CanvasSize = UDim2.new(0, 0, #buttons * 0.07, 0)
+	mainframe.CanvasSize = UDim2.new(0, 0, #buttons * 0.1, 0)
 
 	-- commandBox
 	
